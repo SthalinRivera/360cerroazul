@@ -1,0 +1,283 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+  <script src="app.js"></script>
+  <script src="components/change-sky.js"></script>
+  <script src="components/menu-view.js"></script>
+  <script src="js/app.js"></script>
+  <script src="components/media_videos.js"></script>
+</head>
+<body>
+  <a-scene>
+    <a-assets>
+      <audio id="click-sound" crossorigin="anonymous"
+        src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
+      <img id="sky-default" src="img/sky-default.jpg">
+      <img id="sky-faro" src="img/sites/faro.jpg" alt="">
+      <img id="sky-fraile" src="img/sites/fraile.jpg" alt="">
+      <img id="sky-monumento" src="img/sites/monumento2.jpg" alt="">
+      <img id="sky-muelle" src="img/sites/muelle2.jpg" alt="">
+      <img id="sky-fraile" src="img/sites/fraile.jpg" alt="">
+      <img id="sky-plaza" src="img/sites/plaza.jpg" alt="">
+      <img id="sky-museo" src="img/sites/museo.jpg" alt="">
+      <img id="sky-playa" src="img/sites/playa.jpg" alt="">
+      <img id="sky-arco2" src="img/sites/arco2.jpg" alt="">
+      <img id="sky-museo2" src="img/sites/museo2.jpg" alt="">
+      <img id="sky-huarco" src="img/sites/huarco.jpg" alt="">
+      <img id="sky-glorieta" src="img/sites/glorieta.jpg" alt="">
+      <img id="sky-balconmuelle" src="img/sites/balconmuelle.jpg" alt="">
+
+      <img id="icon-menu" src="img/menu/icon-menu.png" alt="">
+      <img id="icon-game" src="img/menu/icon-game.png" alt="">
+      <img id="icon-web" src="img/menu/icon-web.png" alt="">
+      <img id="icon-facebook" src="img/menu/icon-facebook.png" alt="">
+      <img id="menu-faro" src="img/menu/menu-faro.png" alt="">
+      <img id="menu-fraile" src="img/menu/menu-fraile.png" alt="">
+      <img id="menu-muelle" src="img/menu/menu-muelle.png" alt="">
+      <img id="menu-monumento" src="img/menu/menu-monumento.png" alt="">
+      <img id="menu-plaza" src="img/menu/menu-plaza.png" alt="">
+      <img id="menu-museo" src="img/menu/menu-museo.png" alt="">
+
+      <img id="menu-left-01" src="img/menu/menu-left-01.png" alt="">
+      <img id="menu-left-02" src="img/menu/menu-left-02.png" alt="">
+
+      <img id="img-nosotros" src="img/menu/nosotros.jpg" alt="">
+      <img id="img-ayuda" src="img/menu/ayuda.jpg" alt="">
+
+      <img id="img-inf-plaza" src="img/info/info-plaza.png" alt="">
+      <img id="img-inf-monumento" src="img/info/info-monumento.png" alt="">
+      <img id="img-inf-faro" src="img/info/info-faro.png" alt="">
+      <img id="img-inf-fraile" src="img/info/info-fraile.png" alt="">
+
+      <img id="img-muelle" src="img/menu/menu-muelle2.png" alt="">
+      <img id="img-arco2" src="img/menu/menu-arco2.png" alt="">
+      <img id="img-playa" src="img/menu/menu-playa.png" alt="">
+      <img id="img-huarco" src="img/menu/menu-huarco.png" alt="">
+      <img id="img-glorieta" src="img/menu/menu-glorieta.png" alt="">
+
+
+      <img id="play" src="img/icon/play.png">
+      <img id="pause" src="img/icon/pause.png">
+
+      <video id="video_cerro_azul" loop="true" src="media/videos/video_cerro_Azul.mp4"></video>
+      <video id="video_sala01" loop="true" src="media/videos/video_sala01.mp4"></video>
+      <video id="video_sala02" loop="true" src="media/videos/video_sala02.mp4"></video>
+      <video id="video_sala03" loop="true" src="media/videos/video_sala03.mp4"></video>
+
+
+      <img src="textures/sky.jpeg" id="sky-juego">
+      <img src="textures/meteor.jpeg" id="meteor">
+      <img src="img/portal.png" id="portal" alt="">
+   
+      <a-asset-item id="modelo" src="models/museo/museo3.gltf"></a-asset-item>
+    
+
+      <img id="grid" src="tex/gridPattern.png">
+      <img id="pink" src="tex/pink.jpg">
+      <img id="chrome" src="tex/chrome.jpg">
+    </a-assets>
+
+    <a-sky id="my-sky" rotation="-0.37 2.2 1" src="#sky-default"></a-sky>
+    <a-entity geometry="primitive: plane; width: 10000; height: 10000;" rotation="-90 0 0"
+      material="src: #grid; repeat: 10000 10000; transparent: true;metalness:0.6; roughness: 0.4; sphericalEnvMap: #sky;"></a-entity>
+    <a-entity light="color: #ccccff; intensity: 0.5; type: ambient;" visible=""></a-entity>
+    <a-entity light="color: #ffaaff; intensity: 0.5" position="5 0 0"></a-entity>
+    <a-entity light="color: #8498b2; intensity: 0.5" position="-5 0 0"></a-entity>
+    <a-entity light="color: white; type: ambient;"></a-entity>
+
+    <a-entity class="menu-view" visible="true">
+      
+      <a-gltf-model rotation="31.763061288667448 0.7167702017086599 0.5271211715203573" scale="0.03491 0.025 0.02532"
+        position="0.17816 2.84137 -1.99433" src="#cerro" gltf-model="Cerro.gltf"></a-gltf-model>
+      <a-entity class="menu-center">
+        <a-image change-color-on-hover position="-0.37 2.2 -2.030" src="#menu-plaza" scale="1.691 0.99 1.1"
+          change-sky="img: #sky-plaza"></a-image>
+        <a-image change-color-on-hover position="0.905 2.45 -2.030" src="#menu-muelle" scale="0.819
+            0.5 0.3" change-sky="img: #sky-muelle"></a-image>
+        <a-image change-color-on-hover position="0.905 1.94 -2.030" src="#menu-museo" scale="0.819
+            0.5 0.3" change-sky="img: #sky-museo" value="1"></a-image>
+        <a-image change-color-on-hover position="0.05 1.43 -2.030" src="#menu-fraile" scale="0.819
+            0.5 0.3" change-sky="img: #sky-fraile"></a-image>
+        <a-image change-color-on-hover position="0.905 1.43 -2.030" src="#menu-monumento" scale="0.819 0.5 0.3"
+          change-sky="img: #sky-monumento"></a-image>
+        <a-image change-color-on-hover position="-0.79 1.44 -2.030" src="#menu-faro" scale="0.819
+            0.5 0.3" change-sky="img: #sky-faro"></a-image>
+      </a-entity>
+      <a-entity class="menu-left">
+        <a-plane change-color-on-hover position="1.7 2.55 -2.030" scale="0.5 0.5 0.5" rotation="0
+            -45 0" color="#B03A2E" change-sky="img: #sky-juego">
+          <a-image src="#icon-game" position="0 0.003 0.075" scale="0.819 0.5
+              0.35"></a-image>
+        </a-plane>
+        <a-plane position="1.7 1.98 -2.030" scale="0.5 0.5 0.5" rotation="0
+            -45 0" color="#2874A6">
+          <a-image src="#icon-web" position="0 0.002 0.075" scale="0.819 0.5
+              0.35"></a-image></a-plane>
+        <a-plane position="1.7 1.4 -2.030" scale="0.5 0.5 0.5" rotation="0 -45
+            0" color="#D4AC0D">
+          <a-image src="#icon-facebook" position="0 0.001 0.075" scale="0.819 0.5
+              0.35"></a-image></a-plane>
+      </a-entity>
+      <a-entity class="menu-right">
+        <a-plane position="-1.7 2.35 -2.03" scale="0.8 1 0.5" rotation="0 45 0" color="#212F3D" material="" geometry="">
+          <a-image src="#img-nosotros"></a-image>
+        </a-plane>
+        <a-plane position="-1.7 1.5 -2.03" scale="0.8 0.65 0.5" rotation="0 45 0" color="#17202A" material=""
+          geometry="">
+          <a-image src="#img-ayuda"></a-image>
+        </a-plane>
+      </a-entity>
+      <a-entity class="menu-button">
+        <a-plane position="0.03814 1.05464 -1.97776" visible="false" scale="2.46753 0.2 4.02977" rotation="-45 0 0"
+          color="#0A0A2A"></a-plane>
+        <a-image change-color-on-hover change-sky="img: #sky-balconmuelle" position="-0.92 1.06464 -1.97776"
+          scale="0.4 0.2 0" rotation="-45 0 0" src="#img-muelle"></a-image>
+        <a-image change-color-on-hover change-sky="img: #sky-arco2" position="-0.45 1.06464 -1.97776" scale="0.4 0.2 0"
+          rotation="-45 0 0" src="#img-arco2"></a-image>
+        <a-image change-color-on-hover change-sky="img: #sky-playa" position="0.02 1.065 -1.97776" scale="0.4 0.2 0"
+          rotation="-45 0 0" src="#img-playa"></a-image>
+        <a-image change-color-on-hover change-sky="img: #sky-huarco" position="0.51 1.06464 -1.97776" scale="0.4 0.2 0"
+          rotation="-45 0 0" src="#img-huarco"></a-image>
+        <a-image change-color-on-hover change-sky="img: #sky-glorieta" position="1 1.06464 -1.97776" scale="0.4 0.2 0"
+          rotation="-45 0 0" src="#img-glorieta"></a-image>
+      </a-entity>
+    </a-entity>
+
+    <a-entity menu-view id="icon-menu-img" position="0.05 0.8 -2.030" visible="false" scale="0.3 0.3 0.3">
+      <a-image material="transparent: true; opacity: 1.0;" shadow="cast: false; receive: true"
+        src="#icon-menu"></a-image>
+    </a-entity>
+
+
+
+
+    <a-sphere id="sphere-museo" visible="false" position="-1.036 1.540 2.110" color="yellow" radius="0.3"></a-sphere>
+    <!-- 1. lugar  01-->
+    <a-entity position="-1.177 2.242 1.070" rotation="13 77.023 -1.848" id="txt-el-fraile" visible="false"
+      animation__position="property: position; dur: 3000; easing:
+        easeInOutSine; dir: alternate; from:-1.177 2.9 1.070; to: -1.177 2.24
+        1.070; loop: true">
+      <a-entity position="0.05 0.32 -2.00" geometry="primitive: plane; width:
+          4; height: auto" material="color: #000000; opacity: 0.8;"
+        text=" width: auto; align:center; wrapCount:40; value: EL FRAILE"></a-entity>
+      <a-entity position="0.05 -0.3 -2.00" geometry="primitive: plane; width:
+          2; height: auto" material="color: #000000 ; opacity: 0.5;" text="width: auto; align:center; wrapCount:40; color: #38F51E; value:
+          Es uno de los atractivos turísticos más importantes del distrito que
+          enierra una misteriosa leyenda del porqué de su nombre. Surgió a raíz
+          del terremoto de 1678, a causa de que la poblacíon Cañetana estaba
+          siendo saqueada por piratas, es por ello que los misioneros
+          franciscanos enviaban al distrito de Cerro Azul un fraile que podía
+          observar y advertir a los pobladores."></a-entity>
+    </a-entity>
+    <!-- sities-->
+    <a-entity position="-1.177 2.242 1.070" rotation="45 158 0 " id="txt-info-plaza" visible="false" scale="2 1 1"
+    animation__position="property: position; dur: 3000; easing:
+      easeInOutSine; dir: alternate; from:-1.177 2.9 1.070; to: -1.177 2.24
+      1.070; loop: true">
+      <a-image src="#img-inf-plaza"></a-image>
+  </a-entity>
+
+     <a-entity position="-1.177 2.242 1.070" rotation="45 158 0 " id="txt-info-monumento" visible="false" scale="2 1 1"
+      animation__position="property: position; dur: 3000; easing:
+        easeInOutSine; dir: alternate; from:-1.177 2.9 1.070; to: -1.177 2.24
+        1.070; loop: true">
+        <a-image src="#img-inf-monumento"></a-image>
+    </a-entity>   
+    <a-entity position="-1.177 2.242 50.070" rotation="45 158 0 " id="txt-info-faro" visible="false" scale="2 1 1"
+    animation__position="property: position; dur: 3000; easing:
+      easeInOutSine; dir: alternate; from:-1.177 2.9 1.070; to: -1.177 2.24
+      1.070; loop: true">
+      <a-image src="#img-inf-faro"></a-image>
+  </a-entity>   
+
+  <a-entity position="-1.177 2.242 50.070" rotation="45 158 0 " id="txt-info-fraile" visible="false" scale="2 1 1"
+  animation__position="property: position; dur: 3000; easing:
+    easeInOutSine; dir: alternate; from:-1.177 2.9 1.070; to: -1.177 2.24
+    1.070; loop: true">
+    <a-image src="#img-inf-fraile"></a-image>
+</a-entity>   
+    <!-- MODELS 3D -->
+    <a-gltf-model rotation="0.7992761242074984 -161.818751205413 -2.9662025053922716" scale="0.06995 0.19447 0.21071" position="1.40685 0.96484 -0.80615" src="#banner" gltf-model="models/banner.gltf"></a-gltf-model>
+
+    <a-entity id="_museo3d" visible="false" position="-2.80 -1 7.16" rotation="0 161 0" gltf-model="#modelo"></a-entity>
+
+    <!-- JUEGO PAR NIÑOS -->
+    <a-entity id="meteorsSphere" visible="false">
+      <a-entity class="orbit" position="0 3 0" rotation="0 0 0" animation="property: rotation; to: 0 360 360; loop: true; dur: 40000;
+          easing: linear">
+      </a-entity>
+
+      <a-entity class="orbit" position="0 0 0" rotation="0 0 -45" animation="property: rotation; to: 0 -360 0; loop: true; dur: 30000;
+          easing: linear">
+      </a-entity>
+
+      <a-entity class="orbit" position="0 -3 0" rotation="0 0 -90" animation="property: rotation; to: 0 360 360; loop: true; dur: 20000;
+          easing: linear">
+      </a-entity>
+
+      <a-entity class="orbit" position="0 0 0" rotation="0 0 -120" animation="property: rotation; to: 360 -360 0; loop: true; dur: 50000;
+          easing: linear">
+      </a-entity>
+
+    </a-entity>
+
+  <!-- Videos  Salas 01 , 02, 03, y bienvenida a Cerro Azul -->
+  <a-entity class="videos_museo" visible="false" >
+    <a-video  src="#video_cerro_azul" width="16" height="9" position="-0.01 2 5" rotation="0 180 0" scale="0.1 0.1 0.1">
+      <a-image id="videoControls" position="-0.01 -5.8 5" src="#play" play-pause></a-image>
+    </a-video>
+    <a-video  src="#video_sala01" width="16" height="9" position="-1 2 20" rotation="0 160 0" scale="0.1 0.1 0.1">
+      <a-image id="videoControls" position="0 -5.8 0" src="#play" play-pause_sala01></a-image>
+    </a-video>
+
+    <a-video  src="#video_sala02" width="16" height="9" position="-8 2 22" rotation="0 160 0" scale="0.1 0.1 0.1">
+      <a-image id="videoControls" position="0 -5.8 0" src="#play" play-pause_sala02></a-image>
+    </a-video>
+
+    <a-video  src="#video_sala03" width="16" height="9" position="-10 2 9" rotation="0 90 0" scale="0.1 0.1 0.1">
+      <a-image id="videoControls" position="0 -5 0" src="#play" play-pause_sala03></a-image>
+    </a-video>
+</a-entity>
+
+<a-entity id="river" geometry="primitive: plane" material="color: blue"
+          position="0 0 0" sound="src: url(media/audios/song01_intro.mp3); autoplay: true"></a-entity>
+ <a-entity id="river" geometry="primitive: plane" material="color: blue"
+          position="0 0 0" sound="src: url(media/audios/audio_cerro_azul.mp3); autoplay: false"></a-entity>
+
+    <!-- CAMERA -->
+    <a-entity movement-controls="speed: 0.1; fly: false;" position="0 0 0">
+      <a-camera sound__click="src: #click-sound; on: click; positional: 
+        false;">
+        <a-entity>
+          <a-text visible="false" id="txt-score" value="0 meteoritos cazados" color="white" position="0 -0.1
+            -1" width="1" align="center"></a-text>
+          <a-cursor></a-cursor>
+        </a-entity>
+      </a-camera>
+      <a-entity id="leftHand" laser-controls="hand: left" raycaster="" line="color: #FF00FF"></a-entity>
+      <a-entity id="rightHand" laser-controls="hand: right" raycaster="" line="color: #FFFF00"></a-entity>
+    </a-entity>
+
+    <!--     animation__position="property: position; dur: 3000; easing:
+        easeInOutSine; dir: alternate; from:-0.9 0.7  1.6; to: -0.9 0.7  1.3; loop: true"
+        
+        Controlar 
+        <a-entity cursor-listener
+          animation__click="property: scale; startEvents: click; easing:
+          easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1 1 1"
+          animation__fusing="property: scale; startEvents: fusing; easing:
+          easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1"
+          animation__mouseleave="property: scale; startEvents: mouseleave;
+          easing: easeInCubic; dur: 500; to: 1 1 1" cursor="fuse: true;
+          fuseTimeout: 2000"
+          position="0 0 -1"
+          geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+          material="color: #1382CB; shader: flat">
+        </a-entity>
+      </a-entity>
+    </a-scene>cursor -->
+</body>
+
+</html>

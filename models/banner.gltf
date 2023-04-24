@@ -1,0 +1,249 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.7.33",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0,
+                1
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Cube",
+            "scale" : [
+                1.2184624671936035,
+                1.2184624671936035,
+                1.2184624671936035
+            ],
+            "translation" : [
+                -0.004390686750411987,
+                0,
+                0.09513600915670395
+            ]
+        },
+        {
+            "mesh" : 1,
+            "name" : "SL_021519_18300_76",
+            "rotation" : [
+                0.5065799355506897,
+                0.49333229660987854,
+                -0.4933323264122009,
+                0.5065799355506897
+            ],
+            "scale" : [
+                6.199853420257568,
+                12.319852828979492,
+                6.199853420257568
+            ],
+            "translation" : [
+                0.12539100646972656,
+                5.099999904632568,
+                0.16486400365829468
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "Material",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        },
+        {
+            "alphaMode" : "BLEND",
+            "doubleSided" : true,
+            "name" : "SL_021519_18300_76",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0
+                },
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Cube.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                }
+            ]
+        },
+        {
+            "name" : "SL_021519_18300_76",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 4,
+                        "NORMAL" : 5,
+                        "TEXCOORD_0" : 6
+                    },
+                    "indices" : 7,
+                    "material" : 1
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/png",
+            "name" : "Mapa",
+            "uri" : "Mapa.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 397,
+            "max" : [
+                1,
+                5.86616325378418,
+                1.2917875051498413
+            ],
+            "min" : [
+                -1,
+                3.725290298461914e-08,
+                -1.2917875051498413
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 397,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 397,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 738,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5126,
+            "count" : 4,
+            "max" : [
+                0.2659708261489868,
+                9.870547934553997e-09,
+                0.4677411913871765
+            ],
+            "min" : [
+                -0.23371198773384094,
+                -1.4100782763648567e-09,
+                -0.30644702911376953
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 5,
+            "componentType" : 5126,
+            "count" : 4,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 6,
+            "componentType" : 5126,
+            "count" : 4,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 7,
+            "componentType" : 5123,
+            "count" : 6,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 4764,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 4764,
+            "byteOffset" : 4764
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 3176,
+            "byteOffset" : 9528
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1476,
+            "byteOffset" : 12704
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 48,
+            "byteOffset" : 14180
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 48,
+            "byteOffset" : 14228
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 32,
+            "byteOffset" : 14276
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 12,
+            "byteOffset" : 14308
+        }
+    ],
+    "samplers" : [
+        {
+            "magFilter" : 9729,
+            "minFilter" : 9987,
+            "wrapS" : 33071,
+            "wrapT" : 33071
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 14320,
+            "uri" : "banner.bin"
+        }
+    ]
+}
